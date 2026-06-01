@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Dave Pequite's carpentry work in Fort Collins, Colorado — custom built-ins, finish carpentry, framing, staircases, and more.">
+  <title>Portfolio — Dave Pequite Carpentry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .portfolio-filter { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:36px; }
+    .filter-btn { background:none; border:1px solid var(--border); color:var(--stone); padding:7px 16px; border-radius:40px; font-size:12px; font-family:var(--sans); cursor:pointer; letter-spacing:0.04em; transition:all 0.2s; }
+    .filter-btn:hover, .filter-btn.active { background:var(--charcoal); color:var(--cream); border-color:var(--charcoal); }
+    .portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:4px; }
+    .portfolio-item { aspect-ratio:4/3; overflow:hidden; position:relative; cursor:pointer; }
+    .portfolio-item img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s; }
+    .portfolio-item:hover img { transform:scale(1.05); }
+    .portfolio-item-overlay { position:absolute; inset:0; background:rgba(28,28,24,0); transition:background 0.3s; display:flex; align-items:flex-end; padding:16px; }
+    .portfolio-item:hover .portfolio-item-overlay { background:rgba(28,28,24,0.65); }
+    .portfolio-item-info { opacity:0; transition:opacity 0.2s; }
+    .portfolio-item:hover .portfolio-item-info { opacity:1; }
+    .portfolio-item-title { font-family:'Cormorant Garamond',serif; font-size:16px; color:#FAFAF7; }
+    .portfolio-item-cat { font-size:11px; color:var(--sage-light); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:4px; }
+    .portfolio-placeholder { width:100%; height:100%; background:var(--cream-warm); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
+    .portfolio-placeholder-icon { font-size:28px; color:#C0B8AC; }
+    .portfolio-placeholder-text { font-size:12px; color:#A8A098; letter-spacing:0.06em; text-align:center; }
+    @media(max-width:700px){ .portfolio-grid{ grid-template-columns:repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+          <path d="M10 6 L10 38 L22 38 C30 38 36 32 36 22 C36 12 30 6 22 6 Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <line x1="6" y1="6" x2="14" y2="6" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="6" y1="38" x2="14" y2="38" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span class="nav-name">Dave Pequite <em>Carpentry</em></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="about.html">About Dave</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="accessibility.html">Accessibility</a></li>
+        <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="s-label">The work</div>
+    <h1>Built with care.<br><em>Made to be noticed.</em></h1>
+    <p>Every photo is a real project Dave completed himself in Northern Colorado. No stock images, no renders.</p>
+  </div>
+
+  <section class="section" style="background:var(--cream);">
+    <div class="section-inner">
+      <div class="portfolio-filter">
+        <button class="filter-btn active" data-filter="all">All work</button>
+        <button class="filter-btn" data-filter="finish">Finish carpentry</button>
+        <button class="filter-btn" data-filter="framing">Framing</button>
+        <button class="filter-btn" data-filter="custom">Custom woodwork</button>
+        <button class="filter-btn" data-filter="accessibility">Accessibility</button>
+      </div>
+
+      <!-- 
+        PHOTO INSTRUCTIONS:
+        Add Dave's real project photos to the images/ folder.
+        Name them clearly: finish-01.jpg, builtin-01.jpg, staircase-01.jpg etc.
+        Replace the placeholder divs below with:
+        <img src="images/your-photo.jpg" alt="Description of the work">
+      -->
+
+      <div class="portfolio-grid" id="portfolioGrid">
+        <div class="portfolio-item" data-cat="finish">
+          <div class="portfolio-placeholder"><div class="portfolio-placeholder-icon">&#9632;</div><div class="portfolio-placeholder-text">Built-in library<br>Old Town Fort Collins</div></div>
+          <div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">Finish carpentry</div><div class="portfolio-item-title">Custom built-in library</div></div></div>
+        </div>
+        <div class="portfolio-item" data-cat="finish">
+          <div class="portfolio-placeholder"><div class="portfolio-placeholder-icon">&#9632;</div><div class="portfolio-placeholder-text">Crown molding<br>Harmony Corridor</div></div>
+          <div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">Finish carpentry</div><div class="portfolio-item-title">Crown molding installation</div></div></div>
+        </div>
+        <div class="portfolio-item" data-cat="custom">
+          <div class="portfolio-placeholder"><div class="portfolio-placeholder-icon">&#9632;</div><div class="portfolio-placeholder-text">Custom staircase<br>Timnath residence</div></div>
+          <div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">Custom woodwork</div><div class="portfolio-item-title">Staircase rebuild</div></div></div>
+        </div>
+        <div class="portfolio-item" data-cat="framing">
+          <div class="portfolio-placeholder"><div class="portfolio-placeholder-icon">&#9632;</div><div class="portfolio-placeholder-text">Second-floor addition<br>Fort Collins</div></div>
+          <div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">Framing</div><div class="portfolio-item-title">Second-floor addition</div></div></div>
+        </div>
+        <div class="portfolio-item" data-cat="finish">
+          <div class="portfolio-placeholder"><div class="portfolio-placeholder-icon">&#9632;</div><div class="portfolio-placeholder-text">Coffered ceiling<br>Loveland</div></div>
+          <div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">Finish carpentry</div><div class="portfolio-item-title">Coffered ceiling</div></div></div>
+        </div>
+        <div class="portfolio-item" data-cat="accessibility">
+          <div class="portfolio-placeholder"><div class="portfolio-placeholder-icon">&#9632;</div><div class="portfolio-placeholder-text">Entry ramp<br>Windsor</div></div>
+          <div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">Accessibility</div><div class="portfolio-item-title">Zero-threshold entry ramp</div></div></div>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:32px;">
+        <p style="font-size:13px; color:var(--stone); font-style:italic;">More photos coming as Dave&rsquo;s portfolio grows. <a href="contact.html" style="color:var(--sage); text-decoration:underline; text-underline-offset:3px;">Ask to see examples</a> relevant to your project.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-inner">
+      <h2>See something you like?<br><em>Let&rsquo;s talk.</em></h2>
+      <p>Dave is happy to walk you through similar projects and share what&rsquo;s possible for your home.</p>
+      <a href="contact.html" class="btn-primary btn-lg">Get in touch with Dave</a>
+      <div class="cta-contact-line"><a href="tel:+19707498800">(970) 749-8800</a></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg width="32" height="32" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+          <path d="M10 6 L10 38 L22 38 C30 38 36 32 36 22 C36 12 30 6 22 6 Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <line x1="6" y1="6" x2="14" y2="6" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="6" y1="38" x2="14" y2="38" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span>Dave Pequite Carpentry</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="tel:+19707498800">(970) 749-8800</a><br>
+        Fort Collins, CO &middot; &copy; 2025 Dave Pequite
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+          item.style.display = (filter === 'all' || item.dataset.cat === filter) ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

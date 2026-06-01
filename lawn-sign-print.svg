@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 900" width="2400" height="900">
+  <!-- LAWN SIGN — OPTION A: DARK & GOLD -->
+  <!-- Print size: 24" x 18" at 100dpi — scale up for actual print -->
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&amp;family=DM+Sans:wght@400;500&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- ====== SIGN A: DARK & GOLD ====== -->
+  <g transform="translate(40, 40)">
+    <!-- Background -->
+    <rect x="0" y="0" width="1100" height="820" rx="12" fill="#1C1C18"/>
+    <!-- Gold border -->
+    <rect x="0" y="0" width="1100" height="820" rx="12" fill="none" stroke="#8B6914" stroke-width="8"/>
+    <!-- Inner border hairline -->
+    <rect x="20" y="20" width="1060" height="780" rx="8" fill="none" stroke="#3A3A20" stroke-width="1"/>
+
+    <!-- D mark -->
+    <g transform="translate(68, 200)">
+      <!-- Vertical stem -->
+      <line x1="0" y1="0" x2="0" y2="220" stroke="#F5F0E8" stroke-width="8" stroke-linecap="round"/>
+      <!-- Arch -->
+      <path d="M0 0 L0 220 L60 220 C110 220 148 180 148 110 C148 40 110 0 60 0 Z" fill="none" stroke="#F5F0E8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Gold serifs -->
+      <line x1="-18" y1="0" x2="18" y2="0" stroke="#8B6914" stroke-width="6" stroke-linecap="round"/>
+      <line x1="-18" y1="220" x2="18" y2="220" stroke="#8B6914" stroke-width="6" stroke-linecap="round"/>
+    </g>
+
+    <!-- PEQUITE wordmark -->
+    <text x="250" y="360" font-family="'Cormorant Garamond', Georgia, serif" font-size="140" font-weight="700" fill="#F5F0E8" letter-spacing="6">PEQUITE</text>
+
+    <!-- Subline -->
+    <text x="252" y="420" font-family="'DM Sans', Arial, sans-serif" font-size="32" font-weight="400" fill="#8B6914" letter-spacing="14">CARPENTRY  ·  FORT COLLINS, CO</text>
+
+    <!-- Divider -->
+    <line x1="252" y1="450" x2="1040" y2="450" stroke="#3A3A20" stroke-width="1"/>
+
+    <!-- Phone -->
+    <text x="252" y="510" font-family="'DM Sans', Arial, sans-serif" font-size="44" font-weight="400" fill="#888870" letter-spacing="4">(970) 749-8800</text>
+
+    <!-- Website -->
+    <text x="252" y="560" font-family="'DM Sans', Arial, sans-serif" font-size="30" font-weight="400" fill="#555548" letter-spacing="3">davepequite.com</text>
+
+    <!-- QR code placeholder box -->
+    <rect x="830" y="480" width="230" height="230" rx="6" fill="#2A2A1A" stroke="#444430" stroke-width="1"/>
+    <text x="945" y="548" font-family="'DM Sans', Arial, sans-serif" font-size="20" fill="#555548" text-anchor="middle">SCAN TO</text>
+    <text x="945" y="574" font-family="'DM Sans', Arial, sans-serif" font-size="20" fill="#555548" text-anchor="middle">REQUEST A</text>
+    <text x="945" y="600" font-family="'DM Sans', Arial, sans-serif" font-size="20" fill="#555548" text-anchor="middle">QUOTE</text>
+    <!-- QR placeholder grid (simplified visual representation) -->
+    <rect x="852" y="620" width="60" height="60" rx="2" fill="none" stroke="#666658" stroke-width="2"/>
+    <rect x="858" y="626" width="12" height="12" fill="#666658"/>
+    <rect x="874" y="626" width="12" height="12" fill="#666658"/>
+    <rect x="858" y="642" width="12" height="12" fill="#666658"/>
+    <rect x="874" y="642" width="12" height="12" fill="#666658"/>
+    <rect x="922" y="620" width="60" height="60" rx="2" fill="none" stroke="#666658" stroke-width="2"/>
+    <rect x="928" y="626" width="12" height="12" fill="#666658"/>
+    <rect x="944" y="626" width="12" height="12" fill="#666658"/>
+    <rect x="928" y="642" width="12" height="12" fill="#666658"/>
+    <rect x="944" y="642" width="12" height="12" fill="#666658"/>
+    <text x="945" y="704" font-family="'DM Sans', Arial, sans-serif" font-size="16" fill="#444438" text-anchor="middle">[ QR CODE HERE ]</text>
+
+    <!-- Licensed & Insured badge -->
+    <text x="252" y="700" font-family="'DM Sans', Arial, sans-serif" font-size="24" font-weight="400" fill="#3A3A28" letter-spacing="4">LICENSED &amp; INSURED  ·  OWNER-OPERATED  ·  NO SUBCONTRACTORS</text>
+
+    <!-- Label -->
+    <text x="550" y="790" font-family="'DM Sans', Arial, sans-serif" font-size="20" fill="#2A2A1A" text-anchor="middle" letter-spacing="2">OPTION A — DARK &amp; GOLD — 24"×18" PRINT</text>
+  </g>
+
+  <!-- ====== SIGN B: FOREST GREEN ====== -->
+  <g transform="translate(1260, 40)">
+    <!-- Background -->
+    <rect x="0" y="0" width="1100" height="820" rx="12" fill="#2D4A2A"/>
+    <!-- Sage border -->
+    <rect x="0" y="0" width="1100" height="820" rx="12" fill="none" stroke="#A8C48A" stroke-width="8"/>
+    <!-- Inner border hairline -->
+    <rect x="20" y="20" width="1060" height="780" rx="8" fill="none" stroke="#3A5A38" stroke-width="1"/>
+
+    <!-- D mark -->
+    <g transform="translate(68, 200)">
+      <line x1="0" y1="0" x2="0" y2="220" stroke="#F5F0E8" stroke-width="8" stroke-linecap="round"/>
+      <path d="M0 0 L0 220 L60 220 C110 220 148 180 148 110 C148 40 110 0 60 0 Z" fill="none" stroke="#F5F0E8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="-18" y1="0" x2="18" y2="0" stroke="#A8C48A" stroke-width="6" stroke-linecap="round"/>
+      <line x1="-18" y1="220" x2="18" y2="220" stroke="#A8C48A" stroke-width="6" stroke-linecap="round"/>
+    </g>
+
+    <!-- PEQUITE wordmark -->
+    <text x="250" y="360" font-family="'Cormorant Garamond', Georgia, serif" font-size="140" font-weight="700" fill="#F5F0E8" letter-spacing="6">PEQUITE</text>
+
+    <!-- Subline -->
+    <text x="252" y="420" font-family="'DM Sans', Arial, sans-serif" font-size="32" font-weight="400" fill="#A8C48A" letter-spacing="14">CARPENTRY  ·  FORT COLLINS, CO</text>
+
+    <!-- Divider -->
+    <line x1="252" y1="450" x2="1040" y2="450" stroke="#3A5A38" stroke-width="1"/>
+
+    <!-- Phone -->
+    <text x="252" y="510" font-family="'DM Sans', Arial, sans-serif" font-size="44" font-weight="400" fill="#D0E8C0" letter-spacing="4">(970) 749-8800</text>
+
+    <!-- Website -->
+    <text x="252" y="560" font-family="'DM Sans', Arial, sans-serif" font-size="30" font-weight="400" fill="#7AAA60" letter-spacing="3">davepequite.com</text>
+
+    <!-- QR placeholder -->
+    <rect x="830" y="480" width="230" height="230" rx="6" fill="#1A3010" stroke="#3A5A28" stroke-width="1"/>
+    <text x="945" y="548" font-family="'DM Sans', Arial, sans-serif" font-size="20" fill="#4A7A40" text-anchor="middle">SCAN TO</text>
+    <text x="945" y="574" font-family="'DM Sans', Arial, sans-serif" font-size="20" fill="#4A7A40" text-anchor="middle">REQUEST A</text>
+    <text x="945" y="600" font-family="'DM Sans', Arial, sans-serif" font-size="20" fill="#4A7A40" text-anchor="middle">QUOTE</text>
+    <rect x="852" y="620" width="60" height="60" rx="2" fill="none" stroke="#5A8A50" stroke-width="2"/>
+    <rect x="858" y="626" width="12" height="12" fill="#5A8A50"/>
+    <rect x="874" y="626" width="12" height="12" fill="#5A8A50"/>
+    <rect x="858" y="642" width="12" height="12" fill="#5A8A50"/>
+    <rect x="874" y="642" width="12" height="12" fill="#5A8A50"/>
+    <rect x="922" y="620" width="60" height="60" rx="2" fill="none" stroke="#5A8A50" stroke-width="2"/>
+    <rect x="928" y="626" width="12" height="12" fill="#5A8A50"/>
+    <rect x="944" y="626" width="12" height="12" fill="#5A8A50"/>
+    <rect x="928" y="642" width="12" height="12" fill="#5A8A50"/>
+    <rect x="944" y="642" width="12" height="12" fill="#5A8A50"/>
+    <text x="945" y="704" font-family="'DM Sans', Arial, sans-serif" font-size="16" fill="#3A5A30" text-anchor="middle">[ QR CODE HERE ]</text>
+
+    <!-- Licensed & Insured badge -->
+    <text x="252" y="700" font-family="'DM Sans', Arial, sans-serif" font-size="24" font-weight="400" fill="#3A5A30" letter-spacing="4">LICENSED &amp; INSURED  ·  OWNER-OPERATED  ·  NO SUBCONTRACTORS</text>
+
+    <!-- Label -->
+    <text x="550" y="790" font-family="'DM Sans', Arial, sans-serif" font-size="20" fill="#1A3A18" text-anchor="middle" letter-spacing="2">OPTION B — FOREST GREEN — 24"×18" PRINT</text>
+  </g>
+
+</svg>
