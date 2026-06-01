@@ -1,229 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <base href="/dave-pequite-carpentry/">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Get in touch with Dave Pequite — independent framing and finish carpenter in Fort Collins, Colorado. Tell Dave about your project.">
-  <title>Get in Touch — Dave Pequite Carpentry</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Get in touch with Dave Pequite — independent framing and finish carpenter in Fort Collins, Colorado.">
+<title>Contact — Dave Pequite Carpentry</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",Arial,sans-serif;background:#fff;color:#1a1a14;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+:root{
+  --dark:#1a1a14;--gold:#8B6D1A;--green:#4A7030;--sage:#7AAA58;
+  --cream:#FAFAF5;--warm:#F2EFE8;--border:#E0DDD6;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
+  --max:1200px;--pad:clamp(24px,5vw,80px)
+}
+#nav{position:sticky;top:0;z-index:500;background:#fff;border-bottom:1px solid var(--border);transition:box-shadow .3s}
+#nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08)}
+.nav-wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:clamp(17px,2vw,21px);color:var(--dark)}
+.nav-logo em{font-style:italic;color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:clamp(20px,3vw,40px);list-style:none}
+.nav-links a{font-size:15px;font-weight:500;color:#333;transition:color .2s}
+.nav-links a:hover{color:var(--green)}
+.nav-cta{background:var(--dark)!important;color:#fff!important;padding:10px 22px;border-radius:5px;font-size:14px!important;font-weight:600!important}
+.nav-cta:hover{background:#333!important}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--dark);border-radius:2px}
+.nav-mobile{display:none;flex-direction:column;background:#fff;border-top:1px solid var(--border);padding:20px var(--pad)}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-size:16px;font-weight:500;color:#333;padding:14px 0;border-bottom:1px solid var(--border)}
+.nav-mobile a.nav-cta{margin-top:12px;text-align:center;background:var(--dark)!important;color:#fff!important;padding:14px;border-radius:5px;border:none}
+.page-header{background:var(--dark);padding:clamp(56px,8vw,88px) var(--pad);text-align:center}
+.page-header .eyebrow{color:var(--sage);margin-bottom:14px;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.page-header h1{font-family:var(--serif);font-size:clamp(36px,5vw,52px);font-weight:300;color:#fff;line-height:1.1;margin-bottom:14px}
+.page-header h1 em{font-style:italic;color:var(--sage)}
+.page-header p{font-size:clamp(15px,1.5vw,18px);color:#A8A898;max-width:540px;margin:0 auto}
+.section{padding:clamp(64px,8vw,100px) var(--pad)}
+.section-inner{max-width:var(--max);margin:0 auto}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.s-title{font-family:var(--serif);font-size:clamp(32px,4vw,48px);font-weight:300;color:var(--dark);line-height:1.1;margin-bottom:16px}
+.s-sub{font-size:clamp(15px,1.5vw,18px);color:#444;line-height:1.8;max-width:560px;margin-bottom:clamp(40px,5vw,64px)}
+.btn-green{display:inline-block;background:var(--green);color:#fff;padding:clamp(12px,1.5vw,16px) clamp(28px,3vw,44px);border-radius:5px;font-size:clamp(14px,1.3vw,16px);font-weight:600;font-family:var(--sans);transition:background .2s;border:none;cursor:pointer}
+.btn-green:hover{background:#2D5020}
+.cta-section{background:var(--dark);padding:clamp(72px,10vw,112px) var(--pad);text-align:center}
+.cta-inner{max-width:580px;margin:0 auto}
+.cta-title{font-family:var(--serif);font-size:clamp(36px,5vw,52px);font-weight:300;color:#fff;line-height:1.1;margin-bottom:18px}
+.cta-title em{font-style:italic;color:var(--sage)}
+.cta-sub{font-size:clamp(15px,1.5vw,18px);color:#A8A898;line-height:1.85;margin-bottom:40px}
+.cta-contact{font-size:clamp(13px,1.2vw,15px);color:#555;margin-top:20px;line-height:2.2}
+.cta-contact a{color:#666;transition:color .2s}
+.cta-contact a:hover{color:var(--sage)}
+footer{background:#111;padding:clamp(32px,4vw,48px) var(--pad)}
+.footer-wrap{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+.footer-brand{font-family:var(--serif);font-size:20px;color:#666;font-weight:300;display:flex;align-items:center;gap:12px}
+.footer-nav{display:flex;gap:28px;flex-wrap:wrap}
+.footer-nav a{font-size:13px;font-weight:500;color:#444;transition:color .2s}
+.footer-nav a:hover{color:var(--sage)}
+.footer-info{font-size:13px;color:#444;line-height:2;text-align:right}
+.footer-info a{color:#555;transition:color .2s}
+.footer-info a:hover{color:var(--sage)}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .footer-wrap{flex-direction:column;align-items:flex-start}
+  .footer-info{text-align:left}
+}
+</style>
+<style>
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:clamp(500px,70vh,800px)}
+.contact-info{background:var(--dark);padding:clamp(48px,7vw,88px) clamp(32px,5vw,72px);display:flex;flex-direction:column;justify-content:center}
+.contact-info .s-title{color:#fff;font-size:clamp(28px,4vw,44px)}
+.contact-info .s-title em{font-style:italic;color:var(--sage)}
+.contact-info p{font-size:clamp(15px,1.4vw,17px);color:#C0C0B0;line-height:1.8;margin-bottom:36px}
+.c-detail{display:flex;flex-direction:column;gap:20px}
+.c-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin-bottom:4px}
+.c-value{font-size:clamp(14px,1.4vw,16px);color:#C0C0B0}
+.c-value a{color:#C0C0B0;transition:color .2s}
+.c-value a:hover{color:var(--sage)}
+.contact-form{padding:clamp(48px,7vw,88px) clamp(32px,5vw,72px);background:#fff;overflow-y:auto}
+.form-title{font-family:var(--serif);font-size:clamp(24px,3vw,32px);font-weight:300;color:var(--dark);margin-bottom:8px}
+.form-sub{font-size:14px;color:#777;margin-bottom:clamp(28px,4vw,40px)}
+.form-group{margin-bottom:22px}
+.form-group label{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dark);margin-bottom:8px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:13px 16px;background:#fff;border:2px solid var(--border);border-radius:6px;font-size:15px;font-family:var(--sans);color:var(--dark);transition:border-color .2s;outline:none;appearance:none;-webkit-appearance:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--green)}
+.form-group textarea{min-height:120px;resize:vertical;line-height:1.6}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-submit{background:var(--dark);color:#fff;border:none;padding:15px 32px;border-radius:6px;font-size:16px;font-family:var(--sans);cursor:pointer;width:100%;font-weight:600;transition:background .2s;margin-top:8px}
+.form-submit:hover{background:#333}
+.form-note{font-size:12px;color:#888;text-align:center;margin-top:12px;line-height:1.6}
+.form-success{display:none;text-align:center;padding:60px 24px}
+.form-success h3{font-family:var(--serif);font-size:clamp(24px,3vw,32px);font-weight:300;color:var(--dark);margin-bottom:14px}
+.form-success p{font-size:15px;color:#555}
+@media(max-width:768px){
+  .contact-wrap{grid-template-columns:1fr}
+  .contact-info{padding:48px 24px}
+  .contact-form{padding:48px 24px}
+  .form-row{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
 
-  <nav id="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-          <path d="M10 6 L10 38 L22 38 C30 38 36 32 36 22 C36 12 30 6 22 6 Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          <line x1="6" y1="6" x2="14" y2="6" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/>
-          <line x1="6" y1="38" x2="14" y2="38" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
-        <span class="nav-name">Dave Pequite <em>Carpentry</em></span>
-      </a>
-      <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="about.html">About Dave</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="accessibility.html">Accessibility</a></li>
-        <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
-      </ul>
-    </div>
+<nav id="nav">
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <svg width="38" height="38" viewBox="0 0 44 44" fill="none">
+        <path d="M10 6L10 38L22 38C30 38 36 32 36 22C36 12 30 6 22 6Z" stroke="#1a1a14" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="6" y1="6" x2="14" y2="6" stroke="#8B6D1A" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="6" y1="38" x2="14" y2="38" stroke="#8B6D1A" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      Dave Pequite <em>&nbsp;Carpentry</em>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+      <li><a href="about.html">About Dave</a></li>
+      <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="index.html#services">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="accessibility.html">Accessibility</a>
+    <a href="about.html">About Dave</a>
+    <a href="contact.html" class="nav-cta">Get in Touch</a>
   </nav>
+</nav>
 
-  <div class="contact-layout">
-
-    <div class="contact-left">
-      <div class="s-label">Start a conversation</div>
-      <h1 class="s-h" style="color:#FAFAF7; font-size:38px;">Tell Dave<br>about your<br><em>project.</em></h1>
-      <p class="about-p" style="margin-top:16px;">No pressure, no pitch. Share what you have in mind &mdash; Dave will get back to you personally, usually within one business day.</p>
-
-      <div class="contact-detail">
-        <div class="contact-detail-item">
-          <div>
-            <div class="cd-label">Phone</div>
-            <div class="cd-value"><a href="tel:+19707498800">(970) 749-8800</a></div>
-          </div>
-        </div>
-        <div class="contact-detail-item">
-          <div>
-            <div class="cd-label">Email</div>
-            <div class="cd-value"><a href="mailto:dave@davepequite.com">dave@davepequite.com</a></div>
-          </div>
-        </div>
-        <div class="contact-detail-item">
-          <div>
-            <div class="cd-label">Service Area</div>
-            <div class="cd-value" style="color: var(--stone-light);">Fort Collins &middot; Loveland &middot; Windsor &middot; Timnath &middot; Northern Colorado</div>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top:40px; border-top:1px solid #2A2A22; padding-top:28px;">
-        <p style="font-family:'Cormorant Garamond',serif; font-size:16px; font-style:italic; color:#8AAA70; line-height:1.65;">&ldquo;Every great project starts with a good conversation. I&rsquo;m happy to talk through what you&rsquo;re thinking &mdash; even if you&rsquo;re not sure yet.&rdquo;</p>
-        <p style="font-size:11px; color:#4A4A40; margin-top:10px; letter-spacing:0.08em; text-transform:uppercase;">&mdash; Dave</p>
-      </div>
+<div class="contact-wrap">
+  <div class="contact-info">
+    <div class="eyebrow" style="color:var(--sage)">Start a conversation</div>
+    <h1 class="s-title" style="margin-bottom:16px">Tell Dave about<br><em>your project.</em></h1>
+    <p>No pressure, no pitch. Share what you have in mind &mdash; Dave will get back to you personally, usually within one business day.</p>
+    <div class="c-detail">
+      <div><div class="c-label">Phone</div><div class="c-value"><a href="tel:+19707498800">(970) 749-8800</a></div></div>
+      <div><div class="c-label">Email</div><div class="c-value"><a href="mailto:dave@davepequite.com">dave@davepequite.com</a></div></div>
+      <div><div class="c-label">Service area</div><div class="c-value">Fort Collins &middot; Loveland &middot; Windsor &middot; Timnath &middot; Northern Colorado</div></div>
     </div>
-
-    <div class="contact-right">
-
-      <!-- 
-        FORM SETUP INSTRUCTIONS FOR DAVE:
-        1. Go to https://formspree.io and create a free account
-        2. Create a new form and get your unique endpoint URL
-        3. Replace "YOUR_FORMSPREE_ID" below with your actual form ID
-        4. Formspree will email every submission directly to your address
-        5. Free plan: 50 submissions/month. Upgrade anytime.
-      -->
-
-      <div class="intake-form" id="contactForm">
-        <h2 style="font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:300; margin-bottom:8px; color:#1C1C18;">Project inquiry</h2>
-        <p style="font-size:13px; color:#888880; margin-bottom:32px; font-weight:300;">Fill out what you know &mdash; don&rsquo;t worry if you&rsquo;re still figuring things out.</p>
-
-        <form id="projectForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-
-          <!-- Hidden field to identify this as the lawn sign QR form -->
-          <input type="hidden" name="source" value="lawn-sign-qr">
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="firstName">First name *</label>
-              <input type="text" id="firstName" name="firstName" required placeholder="Jane">
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last name *</label>
-              <input type="text" id="lastName" name="lastName" required placeholder="Smith">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Phone number *</label>
-            <input type="tel" id="phone" name="phone" required placeholder="(970) 555-0000">
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" id="email" name="email" placeholder="jane@example.com">
-          </div>
-
-          <div class="form-group">
-            <label for="city">City / Neighborhood</label>
-            <input type="text" id="city" name="city" placeholder="Fort Collins — Old Town">
-          </div>
-
-          <div class="form-group">
-            <label for="projectType">What kind of project? *</label>
-            <select id="projectType" name="projectType" required>
-              <option value="" disabled selected>Select one&hellip;</option>
-              <option value="framing">Structural framing / addition</option>
-              <option value="finish">Finish carpentry (trim, crown molding, built-ins)</option>
-              <option value="custom">Custom woodwork (staircase, shelving, millwork)</option>
-              <option value="accessibility">Accessibility / aging-in-place modification</option>
-              <option value="remodel">General remodel</option>
-              <option value="repair">Repair or small project</option>
-              <option value="other">Not sure yet / other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="timeline">When are you hoping to start?</label>
-            <select id="timeline" name="timeline">
-              <option value="" disabled selected>Select one&hellip;</option>
-              <option value="asap">As soon as possible</option>
-              <option value="1-3months">Within 1&ndash;3 months</option>
-              <option value="3-6months">Within 3&ndash;6 months</option>
-              <option value="planning">Just planning ahead</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="description">Tell Dave about your project</label>
-            <textarea id="description" name="description" placeholder="Describe what you have in mind &mdash; as much or as little as you know right now."></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="howHeard">How did you hear about Dave?</label>
-            <select id="howHeard" name="howHeard">
-              <option value="" disabled selected>Select one&hellip;</option>
-              <option value="lawn-sign">Saw the sign on a job site</option>
-              <option value="referral">Referred by someone</option>
-              <option value="google">Google search</option>
-              <option value="nextdoor">Nextdoor</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-
-          <button type="submit" class="form-submit">Send to Dave &rarr;</button>
-          <p class="form-note">Dave reads every message personally and responds within one business day.</p>
-
-        </form>
-
-        <div class="form-success" id="formSuccess">
-          <div style="font-size:36px; margin-bottom:16px;">&#10003;</div>
-          <h3>Message sent to Dave.</h3>
-          <p>He&rsquo;ll be in touch within one business day. You can also reach him directly at <a href="tel:+19707498800" style="color:var(--sage);">(970) 749-8800</a>.</p>
+    <blockquote style="margin-top:36px;border-left:2px solid var(--green);padding:14px 18px;background:rgba(74,112,48,.1);border-radius:0 6px 6px 0;font-family:var(--serif);font-size:clamp(15px,1.4vw,17px);font-style:italic;color:var(--sage);line-height:1.65">&ldquo;Every great project starts with a good conversation. I&rsquo;m happy to talk through what you&rsquo;re thinking &mdash; even if you&rsquo;re not sure yet.&rdquo;</blockquote>
+  </div>
+  <div class="contact-form">
+    <div id="formWrap">
+      <div class="form-title">Project inquiry</div>
+      <p class="form-sub">Fill out what you know &mdash; don&rsquo;t worry if you&rsquo;re still figuring things out.</p>
+      <!-- Replace YOUR_FORMSPREE_ID with your actual Formspree form ID -->
+      <form id="projectForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+        <input type="hidden" name="source" value="website-contact">
+        <div class="form-row">
+          <div class="form-group"><label for="firstName">First name *</label><input type="text" id="firstName" name="firstName" required placeholder="Jane"></div>
+          <div class="form-group"><label for="lastName">Last name *</label><input type="text" id="lastName" name="lastName" required placeholder="Smith"></div>
         </div>
-      </div>
-
+        <div class="form-group"><label for="phone">Phone number *</label><input type="tel" id="phone" name="phone" required placeholder="(970) 555-0000"></div>
+        <div class="form-group"><label for="email">Email address</label><input type="email" id="email" name="email" placeholder="jane@example.com"></div>
+        <div class="form-group"><label for="projectType">Type of project *</label>
+          <select id="projectType" name="projectType" required>
+            <option value="" disabled selected>Select one&hellip;</option>
+            <option>Structural framing / addition</option>
+            <option>Finish carpentry (trim, crown molding, built-ins)</option>
+            <option>Custom woodwork (staircase, shelving, millwork)</option>
+            <option>Accessibility / aging-in-place</option>
+            <option>General remodel</option>
+            <option>Repair or small project</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="timeline">When are you hoping to start?</label>
+          <select id="timeline" name="timeline">
+            <option value="" disabled selected>Select one&hellip;</option>
+            <option>As soon as possible</option>
+            <option>Within 1&ndash;3 months</option>
+            <option>Within 3&ndash;6 months</option>
+            <option>Just planning ahead</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="description">Tell Dave about your project</label><textarea id="description" name="description" placeholder="Describe what you have in mind &mdash; as much or as little as you know."></textarea></div>
+        <div class="form-group"><label for="howHeard">How did you hear about Dave?</label>
+          <select id="howHeard" name="howHeard">
+            <option value="" disabled selected>Select one&hellip;</option>
+            <option>Saw his sign on a job site</option>
+            <option>Referred by someone</option>
+            <option>Google search</option>
+            <option>Nextdoor</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <button type="submit" class="form-submit">Send to Dave &rarr;</button>
+        <p class="form-note">Dave reads every message personally and responds within one business day.</p>
+      </form>
+    </div>
+    <div class="form-success" id="formSuccess">
+      <div style="font-size:40px;color:var(--green);margin-bottom:16px">&#10003;</div>
+      <h3>Message sent to Dave.</h3>
+      <p>He&rsquo;ll be in touch within one business day.<br>You can also reach him at <a href="tel:+19707498800" style="color:var(--green)">(970) 749-8800</a>.</p>
     </div>
   </div>
+</div>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <svg width="32" height="32" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-          <path d="M10 6 L10 38 L22 38 C30 38 36 32 36 22 C36 12 30 6 22 6 Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          <line x1="6" y1="6" x2="14" y2="6" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/>
-          <line x1="6" y1="38" x2="14" y2="38" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
-        <span>Dave Pequite Carpentry</span>
-      </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="accessibility.html">Accessibility</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="footer-contact">
-        <a href="tel:+19707498800">(970) 749-8800</a><br>
-        Fort Collins, CO &middot; &copy; 2025 Dave Pequite
-      </div>
+
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-brand">
+      <svg width="30" height="30" viewBox="0 0 44 44" fill="none">
+        <path d="M10 6L10 38L22 38C30 38 36 32 36 22C36 12 30 6 22 6Z" stroke="#666" stroke-width="1.8" fill="none"/>
+        <line x1="6" y1="6" x2="14" y2="6" stroke="#8B6D1A" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="6" y1="38" x2="14" y2="38" stroke="#8B6D1A" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      Dave Pequite Carpentry
     </div>
-  </footer>
-
-  <script src="main.js"></script>
-  <script>
-    document.getElementById('projectForm').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const form = e.target;
-      const btn = form.querySelector('.form-submit');
-      btn.textContent = 'Sending\u2026';
-      btn.disabled = true;
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
-        if (response.ok) {
-          form.style.display = 'none';
-          document.getElementById('formSuccess').style.display = 'block';
-        } else {
-          btn.textContent = 'Something went wrong \u2014 please call Dave directly';
-          btn.disabled = false;
-        }
-      } catch {
-        btn.textContent = 'Something went wrong \u2014 please call (970) 749-8800';
-        btn.disabled = false;
-      }
-    });
-  </script>
-
+    <nav class="footer-nav">
+      <a href="index.html#services">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="accessibility.html">Accessibility</a>
+      <a href="about.html">About Dave</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="footer-info">
+      <a href="tel:+19707498800">(970) 749-8800</a><br>
+      Fort Collins, CO &middot; Licensed &amp; Insured<br>
+      &copy; 2025 Dave Pequite
+    </div>
+  </div>
+</footer>
+<script>
+window.addEventListener("scroll",function(){document.getElementById("nav").classList.toggle("scrolled",window.scrollY>20)});
+document.getElementById("hamburger").addEventListener("click",function(){document.getElementById("navMobile").classList.toggle("open")});
+</script>
+<script>
+document.getElementById("projectForm").addEventListener("submit",async function(e){
+  e.preventDefault();
+  const btn=this.querySelector(".form-submit");
+  btn.textContent="Sending…";btn.disabled=true;
+  try{
+    const r=await fetch(this.action,{method:"POST",body:new FormData(this),headers:{"Accept":"application/json"}});
+    if(r.ok){document.getElementById("formWrap").style.display="none";document.getElementById("formSuccess").style.display="block"}
+    else{btn.textContent="Something went wrong — please call Dave directly";btn.disabled=false}
+  }catch{btn.textContent="Please call (970) 749-8800";btn.disabled=false}
+});
+</script>
 </body>
 </html>
